@@ -8,7 +8,7 @@ Getting started
 
 Clone this Github repo:
 ```shell
-$ git clone http://www.github.com/mattbates/mycms-mongodb
+$ git clone http://www.github.com/mattbates/mycms_mongodb
 $ cd mycms-mongodb
 ```
 
