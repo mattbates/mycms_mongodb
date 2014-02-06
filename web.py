@@ -35,8 +35,7 @@ class User():
 @auth.verify_password
 def verify_password(username, password):
   """Verifies a user's password by hashing the password attempt 
-  and querying the users collection for this username and 
-  hashed password combination  
+  and querying for the user's hashed password and comparing it
   """
   user = User(username)
   mongo_user = db['users'].find_one(
