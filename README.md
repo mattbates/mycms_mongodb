@@ -53,6 +53,15 @@ Optionally, if you're using virtualenv, remember to deactivate it when you shutd
 $ deactivate
 ```
 
+Further reading
+---------------
+
+Please read the online documentation for more about data modelling in MongoDB, including sections on common use cases (which myCMS is based in part).
+
+* [Data Models](http://docs.mongodb.org/manual/data-modeling/)
+* [Use case - metadata and asset management:](http://docs.mongodb.org/ecosystem/use-cases/metadata-and-asset-management/)
+* [Use case - storing comments](http://docs.mongodb.org/ecosystem/use-cases/storing-comments/)
+
 Disclaimer
 ----------
 
