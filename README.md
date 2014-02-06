@@ -30,7 +30,7 @@ $ virtualenv venv
 $ source venv/bin/activate
 ```
 
-Install dependencies using pip and the provided [requirements.txt](../blob/master/requirements.txt) file:
+Install dependencies using pip and the provided [requirements.txt](../master/requirements.txt) file:
 ```shell
 $ pip install –r requirements.txt
 ```
