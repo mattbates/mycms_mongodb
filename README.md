@@ -1,7 +1,19 @@
 myCMS
 =====
 
-myCMS is an example RESTful API for content management built on Python Flask and MongoDB. It is the example application used in the 'Building an Application' series of webinars run by MongoDB Inc.
+myCMS is an example RESTful API for content management (ie blog articles, surveys, photo galleries) built on Python Flask and MongoDB. It is the example application used in the ['Building an Application' series](https://www.mongodb.com/webinar/build_app-part_1) of webinars run by MongoDB in EMEA. It will be developed over the course of the series and can be used to get started and play, and may even be the basis for your own project development.
+
+Current functionality
+---------------------
+
+* Add an article 
+* Retrieve all articles sorted by date
+* Retrieve all articles by tag
+* Retrieve a article
+* Register users
+* Record article view/comment interactions by time
+* Retrieve all comments or a page of comments for an article
+* Basic HTTP authentication with username/ hashed password lookup
 
 Getting started
 ---------------
@@ -18,19 +30,18 @@ $ virtualenv venv
 $ source venv/bin/activate
 ```
 
-Install dependencies using pip:
+Install dependencies using pip and the provided [requirements.txt](../blob/master/requirements.txt) file:
 ```shell
 $ pip install –r requirements.txt
 ```
 
 Start a MongoDB server, using init/service commands, or manually at the shell:
-
 ```shell
 $ mkdir –p data/db
 $ mongod --dbpath=data/db --fork --logpath=mongod.log
 ```
 
-And now you can start the myCMS API server:
+And now you can start the myCMS API server. By default, it runs on port 5000 on the localhost.
 
 ```shell
 $ python web.py
@@ -42,4 +53,7 @@ Optionally, if you're using virtualenv, remember to deactivate it when you shutd
 $ deactivate
 ```
 
-**Note:** myCMS is example source code and should not be used for production purposes. MongoDB does not support or maintain myCMS.
+Disclaimer
+----------
+
+**Important note:** myCMS is example source code and should not be used for production purposes. MongoDB does not support or maintain myCMS.

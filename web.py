@@ -156,7 +156,7 @@ def get_articles_by_tag(tag):
 @app.route('/cms/api/v1.0/articles/<string:article_id>/comments', methods = ['POST'])
 def add_comment(article_id):
   """Adds a comment to the specified article and a 
-  bucket, as well as updating a view counter
+  bucket, as well as updating various counters
   """
   comment = request.get_json();
   if comment is None:
