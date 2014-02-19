@@ -115,14 +115,15 @@ def create_user():
   # insert this user into the users collection
   # insert returns the new doc's _id or None
   # note the user,email combo should be unique (with an index)
-  user_id = db['users'].insert(
-    {'user' : user.username, 
-     'password' : user.password_hash,
-     'email' : email,
-     'joined' : datetime.datetime.utcnow()})
+  user_dict  = {
+    'user' : user.username, 
+    'password' : user.password_hash,
+    'email' : email,
+    'joined' : datetime.datetime.utcnow()}
+  user_id = db['users'].insert(user_dict)
   if user_id is None:
     abort(400)   
-  return jsonify({ 'user_id' : user_id }), 201
+  return jsonify({ 'user' : json.dumps(user_dict, default=json_util.default) }), 201
 
 @app.route('/cms/api/v1.0/articles/<string:article_id>/comments', methods = ['GET'])
 def get_comments(article_id):
